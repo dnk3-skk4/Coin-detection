@@ -16,7 +16,7 @@ I've left the empty cells(ones with pictures at the bottom) in there as comparis
 ### Number of coins detected from simple blob detector.
 I tried morphological operations with different kernels and fed the output to simple blob detector. Note that the output shows different results.
 - The first result is by manually dilating using one kernel(4x4_cross) and then manually eroding using a different kernel(4x4_rect)
-- The second, third, and fourth uses OpenCV's morphologyEx() using a 3x3_rec, 4x4_rect, and 5x5_rect. They didn't detect the right number of coins because two coins got merged into one huge blob because their borders were too close to each other.
+- The second, third, and fourth uses OpenCV's morphologyEx()(morhpological closing) using a 3x3_rec, 4x4_rect, and 5x5_rect. They didn't detect the right number of coins because two coins got merged into one huge blob because their borders were too close to each other.
 
 <img src="images/coins-detected-simpleblob.png" width="auto" height="600">
 
