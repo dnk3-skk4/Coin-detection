@@ -4,6 +4,22 @@ A short exercise consisting of detecting multiple coins using OpenCV in Python 3
 
 I've left the empty cells(ones with pictures at the bottom) in there as comparisons of my results from OpenCV team's results for the assignment.
 
+### Object
+
+The objective of the exercise is to find the coins in the image and identify them by counting them or by displaying the contours or color.
+
+The steps I used to achieve this are:
+
+1. Obtain a binary image that best fits the target object. This is a critical part of the task, obtaining a binary image that has all of the target object and as little amount of false objects as I can get.
+
+2. Performing morphology to further reduce the number of detected objects in the image. I want to obtain an image where our target object has the best representation to help with later processes(area, color, shape, etc.)
+
+3. Filtering out false positive(thankfully I obtained a good mask so I did not have to do this part)
+
+4. Feeding the binary image to the detectors: simple blob detector, Principal component analysis(PCA), and find contours
+
+5. Outputting the results.
+
 ### Original Images + Grayscale Image
 <img src="images/index.png" width="400" height="auto">
 
